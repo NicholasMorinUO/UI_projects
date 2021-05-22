@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Module 1 Survey</title>
+    <title>Module 1 - Survey</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
@@ -10,24 +10,29 @@
   <body>
     <div class="testbox">
       <form action="/">
-        <h1>Module 1 Survey</h1>
-        <p>Thank you for taking the time to fill in my Module 1 Survey. By providing us your feedback, you are helping us understand what we do well and what improvements we need to implement.</p>
-        <h4>Name</h4>
+        <h1>Module 1 - Survey</h1>
+        <p>Thank you for taking the time to fill in my Module 1 Survey! Your feedback is not going to be read by me (it's a static website)</p>
+
+        <p>Here is the link to the website being evaluated: <a class="links" href="https://www.wealthsimple.com/en-ca/">https://www.wealthsimple.com/en-ca/</a></p>
+        
+        <p><img class="screenshot" src="assets/Wealthsimple Home Page Screen Shot.png" alt="Wealthsimple Home Page Screen Shot"></p>
+
+        <h4>Name<span>*</span></h4>
         <input class="first-name" type="text" name="name" placeholder="First" />
         <input type="text" name="name" placeholder="Last" />
         <h4>Email<span>*</span></h4>
         <input type="text"/>
-        <h4>How satisfied were you with:<span>*</span></h4>
+        <h4>How would you rate the quality of the Wealthsimple website?<span>*</span></h4>
         <table>
           <tr>
             <th class="first-col"></th>
-            <th>Very Satisfied</th>
-            <th>Satisfied</th>
-            <th>Unsatisfied</th>
-            <th>Very Unsatisfied</th>
+            <th>Very Bad</th>
+            <th>Bad</th>
+            <th>Good</th>
+            <th>Very Good</th>
           </tr>
           <tr>
-            <td class="first-col">Key point #1</td>
+            <td class="first-col">Overall Quality</td>
             <td><input type="radio" value="none" name="point#1" /></td>
             <td><input type="radio" value="none" name="point#1" /></td>
             <td><input type="radio" value="none" name="point#1" /></td>
@@ -36,7 +41,6 @@
         </table>
         <h4>Feel free to add any other comments or suggestions:</h4>
         <textarea rows="5"></textarea>
-        <small>* The information given within the Feedback Form will be used for service improvement only and are strictly confidential.</small>
         <div class="btn-block">
           <button type="button" onclick="alert('This button is not yet functional')" href="#">Submit Questionaire</button>
           <!-- type="submit" --> <!-- goes inside the the first arrows above to allow a submition-->
