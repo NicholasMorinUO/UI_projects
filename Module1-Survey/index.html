@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Module 1 Survey</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/">
+        <h1>Module 1 Survey</h1>
+        <p>Thank you for taking the time to fill in my Module 1 Survey. By providing us your feedback, you are helping us understand what we do well and what improvements we need to implement.</p>
+        <h4>Name</h4>
+        <input class="first-name" type="text" name="name" placeholder="First" />
+        <input type="text" name="name" placeholder="Last" />
+        <h4>Email<span>*</span></h4>
+        <input type="text"/>
+        <h4>How satisfied were you with:<span>*</span></h4>
+        <table>
+          <tr>
+            <th class="first-col"></th>
+            <th>Very Satisfied</th>
+            <th>Satisfied</th>
+            <th>Unsatisfied</th>
+            <th>Very Unsatisfied</th>
+          </tr>
+          <tr>
+            <td class="first-col">Key point #1</td>
+            <td><input type="radio" value="none" name="point#1" /></td>
+            <td><input type="radio" value="none" name="point#1" /></td>
+            <td><input type="radio" value="none" name="point#1" /></td>
+            <td><input type="radio" value="none" name="point#1" /></td>
+          </tr>
+        </table>
+        <h4>Feel free to add any other comments or suggestions:</h4>
+        <textarea rows="5"></textarea>
+        <small>* The information given within the Feedback Form will be used for service improvement only and are strictly confidential.</small>
+        <div class="btn-block">
+          <button onclick="alert('This button is not yet functional')" type="submit" href="https://www.google.ca/">Submit Questionaire</button>
+          <!-- type="submit" --> <!-- goes inside the the first arrows above to allow a submition-->
+          <!-- href="/" --> <!-- goes inside the the first arrows above to link to somewhere-->
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
