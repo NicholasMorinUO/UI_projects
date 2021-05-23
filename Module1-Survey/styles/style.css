@@ -1,8 +1,9 @@
 
 html, body {
     min-height: 100%;
+    background-color:#ccc;
 }
-body, div, form, input, p { 
+body, div, form, input, p{ 
     padding: 0;
     margin: 0;
     outline: none;
@@ -11,8 +12,22 @@ body, div, form, input, p {
     color: #666;
     line-height: 22px;
 }
+footer{
+    align-self: right;
+    text-align: right;
+    align-content: right;
+    padding-right: 2%;
+    margin-right: 2%;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+}
 h1 {
-    font-weight: 400;
+    font-weight: 1000;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
 }
 h4 {
     margin: 22px 0 4px;
@@ -36,8 +51,8 @@ form {
     font-size: 16px;
 }
 .screenshot{
-    width: 800px;
-    height: 500px;
+    width: 80%;
+    height: auto;
 }
 input {
     width: calc(100% - 10px);
@@ -54,7 +69,7 @@ input:hover, textarea:hover {
     margin-bottom: 22px;
 }
 span {
-    color: red;
+    color: #666;
 }
 th, td {
     width: 21%;
@@ -95,8 +110,83 @@ button {
 button:hover {
     background-color: #0666a3;
 }
+
 @media (min-width: 568px) {
     th, td {
     word-break: keep-all;
     }
+}      
+
+.item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder, a {
+    color: #095484;
 }
+.item input:hover, .item select:hover, .item textarea:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 6px 0 #095484;
+    color: #095484;
+}
+.item {
+    position: relative;
+    margin: 10px 0;
+}
+
+input[type=checkbox]  {
+    display: none;
+}
+label.check {
+    position: relative;
+    display: inline-block;
+    margin: 5px 20px 15px 0;
+    cursor: pointer;
+}
+.question span {
+    margin-left: 30px;
+}
+span.required {
+    margin-left: 0;
+    color: red;
+}
+.checkbox-item label {
+    margin: 5px 20px 10px 0;
+}
+label.radio:before, label.check:before {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+label.radio:before {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #095484;
+}
+label.check:before {
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid #095484;
+}
+input[type=checkbox]:checked + .check:before {
+    background: #095484;
+}
+label.check:after {
+    left: 4px;
+    border: 3px solid #fff;
+}
+label.check:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    width: 8px;
+    height: 4px;
+    background: transparent;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+

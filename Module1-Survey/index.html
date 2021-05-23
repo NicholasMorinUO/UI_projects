@@ -15,14 +15,16 @@
 
         <p>Here is the link to the website being evaluated: <a class="links" href="https://www.wealthsimple.com/en-ca/">https://www.wealthsimple.com/en-ca/</a></p>
         
-        <p><img class="screenshot" src="assets/Wealthsimple Home Page Screen Shot.png" alt="Wealthsimple Home Page Screen Shot"></p>
+        <p><a href="https://www.wealthsimple.com/en-ca/"><img class="screenshot" src="assets/Wealthsimple Home Page Screen Shot.png" alt="Wealthsimple Home Page Screen Shot"></a></p>
 
-        <h4>Name<span>*</span></h4>
+        <h4>Name<span class="required">*</span></h4>
         <input class="first-name" type="text" name="name" placeholder="First" />
         <input type="text" name="name" placeholder="Last" />
-        <h4>Email<span>*</span></h4>
+        <h4>Email<span class="required">*</span></h4>
         <input type="text"/>
-        <h4>How would you rate the quality of the Wealthsimple website?<span>*</span></h4>
+        <h4>Describe the vibe of the Wealthsimple website in one word<span class="required">*</span></h4>
+        <input type="text"/>
+        <h4>How would you rate the quality of the Wealthsimple website?<span class="required">*</span></h4>
         <table>
           <tr>
             <th class="first-col"></th>
@@ -39,6 +41,32 @@
             <td><input type="radio" value="none" name="point#1" /></td>
           </tr>
         </table>
+        <h4>What UI aspect of the Wealthsimple website was best?<span class="required">*</span></h4>
+        <label for="UI-aspect">Choose a UI aspect:</label>
+        <select name="UI-aspect" id="UI-aspect">
+          <option value="colors">colors</option>
+          <option value="simplicity">simplicity</option>
+          <option value="animations">animations</option>
+          <option value="none-of-the-above">none of the above</option>
+        </select>
+        
+        <div class="question">
+          <h4>What UI aspects of the Wealthsimple website require improvement?<span class="required">*</span></h4>
+          <div class="question-answer checkbox-item">
+            <div>
+              <input type="checkbox" value="none" id="check_1" name="checklist" required/>
+              <label for="check_1" class="check"><span>colors</span></label>
+            </div>
+            <div>
+              <input type="checkbox" value="none" id="check_2" name="checklist" required/>
+              <label for="check_2" class="check"><span>simplicity</span></label>
+            </div>
+            <div>
+              <input type="checkbox" value="none" id="check_3" name="checklist" required/>
+              <label for="check_3" class="check"><span>animations</span></label>
+            </div>
+          </div>
+        </div>
         <h4>Feel free to add any other comments or suggestions:</h4>
         <textarea rows="5"></textarea>
         <div class="btn-block">
@@ -47,6 +75,13 @@
           <!-- href="/" --> <!-- goes inside the the first arrows above to link to somewhere-->
         </div>
       </form>
+      
+    </div>
+    <div>
+      <footer>
+        <p>Website designed by: Nicholas Morin<br>
+        <a href="mailto:nmori064@uottawa.ca">nmori064@uottawa.ca</a></p>
+      </footer>
     </div>
   </body>
 </html>
