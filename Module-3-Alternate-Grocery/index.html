@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html style="background-image: url(assets/brick.jpg)"> 
+<head>
+	<!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>-->
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+  <title>BobLaws</title>
+</head>
+
+<body onload="populateListProductChoices('dietSelect', 'displayProduct')" >
+  <div class="banner">
+    <span><img src="assets/boblaws.png" alt="Store title"></span>
+    
+  </div>
+
+  <!-- Tab links, each one with an onclick event associated with it -->
+  <div class="tab">
+    <button class="tablinks" id="tab1" onclick="openInfo(event, 'Client')">Dietary Restrictions</button>
+    <button class="tablinks" id="tab2" onclick="openInfo(event, 'Products')">Products</button>
+    <button class="tablinks" id="tab3" onclick="openInfo(event, 'Cart')">Cart</button>
+  </div>
+
+  <!-- Tab content -->
+  <div id="Client" class="tabcontent">
+    <!-- <h3>Dietary Restrictions</h3> -->
+    <h3>If you have any dietary restrictions, please check them now</h3>
+    Dietary Restrictions:
+    <!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+      <option value=""></option>
+       <option value="Vegetarian">Vegetarian</option> 
+       <option value="GlutenFree">GlutenFree</option> 
+      <option value="Lactose_Intolerance">Lactose Intolerance  </option>
+      <option value="Nut_Allergy">Nut Allergy  </option>
+      <option value="Organic">Organic  </option>
+      <option value="Lactose_Intolerance_Nut_Allergy">Lactose Intolerance and Nut Allergy </option>
+      <option value="Lactose_Intolerance_Organic">Lactose Intolerance and Organic </option>
+      <option value="Nut_Allergy_Organic">Nut Allergy and Organic </option>
+      <option value="Lactose_Intolerance_Nut_Allergy_Organic">Lactose Intolerance, Nut Allergy, and Organic </option>
+      <option value="None">None</option>
+    </select> -->
+
+    <div class="question" id="dietSelect">
+      <div class="question-answer checkbox-item">
+        <!-- <div>
+          <input type="checkbox" value="None" id="check_1" name="checklist" required/>
+          <label for="check_1" class="check"><span>None</span></label>
+        </div> -->
+        <div>
+          <input onchange="populateListProductChoices('dietSelect', 'displayProduct')" type="checkbox" value="Lactose_Intolerance" id="check_1" name="checklist" required/>
+          <label for="check_1" class="check"><span>Lactose Intolerance</span></label>
+        </div>
+        <div>
+          <input onchange="populateListProductChoices('dietSelect', 'displayProduct')" type="checkbox" value="Nut_Allergy" id="check_2" name="checklist" required/>
+          <label for="check_2" class="check"><span>Nut Allergy</span></label>
+        </div>
+        <div>
+          <input onchange="populateListProductChoices('dietSelect', 'displayProduct')" type="checkbox" value="Organic" id="check_3" name="checklist" required/>
+          <label for="check_3" class="check"><span>Organic</span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="Products" class="tabcontent">
+    <h3>Your targeted products</h3>
+     <p>We preselected products based on your restrictions<!--(select "None" in Client tab for all 10 items).--></p> 
+    Choose items to buy:
+    <div id="displayProduct"></div>
+    <button id="addCart" type="button" class="block" onclick="clickAll()">
+      Order all!
+    </button>
+  </div>
+
+  <div id="Cart" class="tabcontent">
+    <h3>Cart</h3>
+    <p>Here is your cart.</p>
+    <div id="displayCart"></div>
+  </div>
+  
+  <div>
+    <footer>
+      <p>Website designed by: Nicholas Morin (with the professor's template and a bit of StackOverflow)<br>
+      <a href="mailto:nmori064@uottawa.ca">nmori064@uottawa.ca</a></p>
+    </footer>
+  </div>
+
+  <script src="scripts/groceries.js"></script>
+  <script src="scripts/main.js"></script>
+
+</body>
+</html>
